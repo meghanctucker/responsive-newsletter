@@ -1,9 +1,17 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 #head {
 	background-color: black;
 	display: flex;
 	justify-content: center;
 	color: white;
 	padding: 10px;
+	min-width: 100%;
 }
 
 #head h1 {
@@ -14,9 +22,11 @@
 #info {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	padding: 10px 10px 20px 10px;
 	border-bottom: 5px solid black;
-	margin: 20px;
+	margin: 20px 0px;
+	max-width: 310px;
 }
 
 #info h1 {
@@ -33,7 +43,10 @@
 
 #top-border {
 	border-top: 2px solid black;
-	margin: -17px 20px 20px 20px;
+	display: flex;
+	justify-content: center;
+	margin: -17px 25px 20px 25px;
+	max-width: 330px;
 }
 
 form {
@@ -53,7 +66,7 @@ fieldset {
 	padding: 5px 0px;
 }
 
-form input[type="text"],
+ form input[type="text"],
  form input[type="email"], 
  form input[type="tel"], 
  form textarea, 
@@ -64,7 +77,23 @@ form input[type="text"],
 	border-radius: 5px;
 	border-style: none;
 	padding: 5px;
-	min-width: 260px;
+}
+
+form textarea {
+	width: 280px;
+}
+
+form input[type="text"]:focus,
+ form input[type="email"]:focus, 
+ form input[type="tel"]:focus, 
+ form textarea:focus, 
+ form select:focus{
+ 	border: 1px solid black;
+ 	background-color: white;
+ }
+
+form input:hover{
+	border: 2px solid black;
 }
 
 form button {
@@ -72,13 +101,19 @@ form button {
 	color: white;
 	padding: 15px;
 	margin-left: 15px;
-	min-width: 270px;
+	min-width: 95%;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	padding-top: 10px;
 }
 
 #newsletter {
 	border-top: 2px solid black;
 	padding-top: 10px;
-	min-width: 270px;
+	min-width: 100%;
 }
 
 .newsletter label,
@@ -87,10 +122,38 @@ form button {
 	margin: 10px 0px;
 }
 
+
 #copy {
 	text-align: center;
 	padding-bottom: 20px;
 	margin-bottom: 20px;
+}
+/*********
+font&color styles
+**********/
+
+#head h1 {
+	font-family: 'Merriweather', serif;
+	font-size: 2em;
+}
+
+#info h1,
+fieldset legend {
+	font-family: 'Slabo 27px', serif;
+	font-size: 1.5em;
+}
+
+p {
+	color: darkgray;
+}
+form {
+	background-color: #eff4f9;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"]{
+	text-align: right;
 }
 
 /*******
@@ -103,28 +166,72 @@ media queries: tablet
 		display:flex;
 		justify-content: center;
 	}
+	
+	#top-border {
+		min-width: 440px;
+	}
+	
+	#info {
+		max-width: 420px;
+	}
+	
+	
 
 	#signin {
-		border: 1px solid red;
-		margin: auto;
 		display: flex;
 		flex-direction: column;
-		flex-wrap: wrap;
 		justify-content: flex-start;
-		max-width: 440px;
+
 	}
 	
 	.info {
 		display: flex;
-		align-content: center;
+		flex-direction: row;
 		align-items: center;
+		justify-content: flex-start;
+
 	}
 	
-	.info label {
-		flex-grow: 3;
-		padding-right: 20px;
+	.info label{
+		min-width: 120px;
 	}
 	
+	.info input[type="text"],
+	.info input[type="tel"],
+	.info input[type="email"]{
+		width: 280px;
+		padding: 10px;
+	}
+	
+	.info select{
+		width: 300px;
+		height: 35px;
+	}
+	
+	.info #zip {
+		max-width: 100px;
+	}
+	
+	form textarea {
+		min-width: 410px;
+		min-height: 80px;
+	}	
+	form button {
+		min-width: 420px;
+	}
+	
+	#newsletter {
+	min-width: 425px;
+	
+	body #info {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 10px 20px 10px;
+	border-bottom: none;
+	margin: 0px;
+}
+	
+
 }
 
 

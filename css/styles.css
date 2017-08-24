@@ -222,6 +222,7 @@ media queries: tablet
 	
 	#newsletter {
 	min-width: 425px;
+	}
 	
 	body #info {
 	display: flex;
@@ -229,9 +230,8 @@ media queries: tablet
 	padding: 10px 10px 20px 10px;
 	border-bottom: none;
 	margin: 0px;
-}
+	}
 	
-
 }
 
 

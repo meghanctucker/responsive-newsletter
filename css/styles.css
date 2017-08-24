@@ -90,7 +90,7 @@ form input[type="text"]:focus,
  form select:focus{
  	border: 1px solid black;
  	background-color: white;
- }
+ 	 }
 
 form input:hover{
 	border: 2px solid black;
@@ -174,8 +174,6 @@ media queries: tablet
 	#info {
 		max-width: 420px;
 	}
-	
-	
 
 	#signin {
 		display: flex;
@@ -224,13 +222,6 @@ media queries: tablet
 	min-width: 425px;
 	}
 	
-	body #info {
-	display: flex;
-	flex-direction: column;
-	padding: 10px 10px 20px 10px;
-	border-bottom: none;
-	margin: 0px;
-	}
 	
 }
 
